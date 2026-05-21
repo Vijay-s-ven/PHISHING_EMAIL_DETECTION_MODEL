@@ -1,31 +1,55 @@
-PHISHING_EMAIL_DETECTION
+# Phishing Email Detection Model
 
-Simple demo project for detecting phishing emails using a small dataset and a Naive Bayes classifier.
+A Machine Learning based Phishing Email Detection System built using Python and Scikit-learn that classifies emails as **Phishing** or **Safe** based on textual content, suspicious keywords, and URL analysis.
 
-Files
-- phishing_detector.py - small training script and interactive predictor
-- emails.csv - sample dataset (columns: text,label)
-- requirements.txt - Python dependencies
+---
 
-Quick start
+## Project Overview
 
-1. Create and activate a virtual environment (Windows PowerShell):
+Phishing emails are fraudulent messages designed to steal sensitive information such as passwords, banking details, and personal data. This project uses Machine Learning techniques to automatically detect phishing emails with high accuracy.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
+The model analyzes:
+- Email text content
+- Suspicious keywords
+- Presence of URLs
+- Fraud-related patterns
 
-2. Install dependencies:
+and predicts whether an email is:
+- ⚠️ Phishing
+- ✅ Safe
 
-```powershell
-pip install -r requirements.txt
-```
+---
 
-3. Run the detector:
+## Features
 
-```powershell
-python phishing_detector.py
-```
+- Train on phishing and legitimate email datasets
+- Extract email features using TF-IDF
+- Detect suspicious URLs and keywords
+- Machine Learning classification using Random Forest
+- Accuracy evaluation
+- Confusion Matrix visualization
+- Interactive user input testing
 
-Type or paste an email body at the prompt to get a prediction (`phishing` or `legitimate`).
+---
+
+## Technologies Used
+
+- Python
+- Scikit-learn
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+
+---
+
+## Project Structure
+
+```bash
+PHISHING_EMAIL_DETECTION/
+│
+├── phishing_detector.py
+├── emails.csv
+├── requirements.txt
+└── README.md
